@@ -1,0 +1,28 @@
+int A = 7;
+int B = 6;
+int C = 5;
+int Saida = 4;
+int a;
+int b;
+int c;
+
+void setup(){ 
+  pinMode(Saida, OUTPUT);
+  pinMode(a, INPUT);
+  pinMode(b, INPUT);
+  pinMode(c, INPUT);
+}
+
+void loop(){
+a = digitalRead(A);
+b = digitalRead(B);
+c = digitalRead(C);
+  if((!a && c)+(!b && a)){
+    digitalWrite(Saida, HIGH);
+    delay(1000);
+  }
+      else {
+      digitalWrite(Saida, LOW);
+    delay(1000);
+	}
+}
